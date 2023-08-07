@@ -31,7 +31,7 @@ class Password:
 
     # This method checks if there is at least one special character in the password.
     def special_char(self):
-        return any(string.punctuation for char in self.password)
+        return any(string.punctuation for _ in self.password)
 
 #This is a function to verify that the methods are able to find an incorrect rule or character.
 def legal():
@@ -65,4 +65,5 @@ print(pass1.password_length())
 print("\nspecial\n--------")
 print(pass1.special_char())
 print("**********")
+
 legal()
