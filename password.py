@@ -4,7 +4,7 @@ class Password:
     # This is the default password for this class.
     def __init__(self, password):
         self.password = password
-        print(password)
+        #print(password)
 
     # This method checks that the password in long enough and not too long.
     def password_length(self):
@@ -52,18 +52,18 @@ is_special = pass1.special_char()
 is_long = pass1.password_length()
 
 #Those are tests to see that the functions and the methods are working as expected.
-print("\nalpha\n--------")
-print(pass1.is_alpha())
-print("\ndigit\n--------")
-print(pass1.is_digit())
-print("\ncapital\n---------")
-print(pass1.is_capital())
-print("\nlower\n--------")
-print(pass1.is_lower())
-print("\nlength\n--------")
-print(pass1.password_length())
-print("\nspecial\n--------")
-print(pass1.special_char())
-print("**********")
+# print("\nalpha\n--------")
+# print(pass1.is_alpha())
+# print("\ndigit\n--------")
+# print(pass1.is_digit())
+# print("\ncapital\n---------")
+# print(pass1.is_capital())
+# print("\nlower\n--------")
+# print(pass1.is_lower())
+# print("\nlength\n--------")
+# print(pass1.password_length())
+# print("\nspecial\n--------")
+# print(pass1.special_char())
+# print("**********")
 
 legal()

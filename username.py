@@ -2,7 +2,7 @@ class Username:
     # This is the default of the username and all the methods are working according to this.
     def __init__(self, username):
         self.username = username
-        print(username)
+        #print(username)
 
 # This method checks that the input has at least one underscore.
     def has_underscore(self):
@@ -40,13 +40,13 @@ def legit():
         print("username not valid")
 
 #Those are tests to see that the functions and the methods are working as expected.
-print("\nunder\n--------")
-print(user1.has_underscore())
-print("\ndigit\n--------")
-print(user1.has_digit())
-print("\nlength\n--------")
-print(user1.username_length())
-print("\nalpha\n--------")
-print(user1.is_alpha())
-print("**********")
+# print("\nunder\n--------")
+# print(user1.has_underscore())
+# print("\ndigit\n--------")
+# print(user1.has_digit())
+# print("\nlength\n--------")
+# print(user1.username_length())
+# print("\nalpha\n--------")
+# print(user1.is_alpha())
+# print("**********")
 legit()

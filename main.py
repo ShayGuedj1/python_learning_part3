@@ -1,8 +1,11 @@
 import username
 import password
+import errors
 
 user = username.user1
 pwd = password.pass1
+
+
 
 def check_input(username, password):
     if username.username_length() and username.has_digit() and username.has_underscore() and username.is_alpha() and \
