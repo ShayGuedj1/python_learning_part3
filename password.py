@@ -1,7 +1,7 @@
 import string
 class Password:
 
-    # This is the default password for this class.
+# This is the default password for this class.
     def __init__(self, password):
         self.password = password
 
@@ -48,13 +48,6 @@ class Password:
         else:
             return False
 
-#This is a function to verify that the methods are able to find an incorrect rule or character.
-# def legal():
-#     if is_alpha and is_digit and is_special and is_lower and is_capital and is_long:
-#         print("password is valid")
-#     else:
-#         print("password not valid")
-
 #This creates a password by calling the class Password, and ask the user to put an input.
 pass1 = Password(input("please enter the password: "))
 
@@ -69,4 +62,3 @@ is_legal = pass1.legal()
 short = pass1.passshort()
 long = pass1.passlong()
 
-#legal()
