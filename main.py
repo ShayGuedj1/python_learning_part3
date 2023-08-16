@@ -22,11 +22,11 @@ def check_input(username, password):
         print("ok")
 
 
-errors.UsernameContainsIllegalCharacter()
-errors.UsernameTooShort()
-errors.UsernameTooLong()
-errors.PasswordMissingCharacter()
-errors.PasswordTooShort()
-errors.PasswordTooLong()
+# errors.UsernameContainsIllegalCharacter()
+# errors.UsernameTooShort()
+# errors.UsernameTooLong()
+# errors.PasswordMissingCharacter()
+# errors.PasswordTooShort()
+# errors.PasswordTooLong()
 
 check_input(user, pwd)
