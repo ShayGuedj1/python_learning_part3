@@ -1,8 +1,8 @@
 class Username:
-    # This is the default of the username and all the methods are working according to this.
+# This is the default of the username and all the methods are working according to this.
     def __init__(self, username):
         self.username = username
-        #print(username)
+        
 
 # This method checks that the input has at least one underscore.
     def has_underscore(self):
@@ -48,13 +48,3 @@ is_alpha = user1.is_alpha()
 short = user1.isshort()
 long = user1.islong()
 is_legit = user1.legit()
-#is_too_short = user1.isshort()
-#is_too_long = user1.islong()
-#This is a function to verify that the methods are able to find an incorrect rule or character.
-# def legit():
-#     if valid_length and has_digit and has_underscore and is_alpha and not None:
-#         print("username is valid")
-#     else:
-#         print("username not valid")
-#
-#legit()

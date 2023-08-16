@@ -14,6 +14,4 @@ def check_input(username, password):
         print("ok")
 
 
-
-
 check_input(user, pwd)
