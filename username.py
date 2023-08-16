@@ -16,9 +16,23 @@ class Username:
     def is_alpha(self):
         return any(char.isalpha() for char in self.username)
 
+    def isshort(self):
+        if len(self.username) < 3:
+            return True
+
+    def islong(self):
+        if len(self.username) > 16:
+            return True
+
 # This method checks that the input has the correct length between 3 and 16 characters.
     def username_length(self):
-        if 3 <= len(self.username) < 16:
+        if self.islong() and self.isshort():
+            return False
+        else:
+            return True
+
+    def legit(self):
+        if self.username_length and self.has_digit and self.has_underscore and self.is_alpha:
             return True
         else:
             return False
@@ -31,22 +45,16 @@ has_underscore = user1.has_underscore()
 has_digit = user1.has_digit()
 valid_length = user1.username_length()
 is_alpha = user1.is_alpha()
-
+short = user1.isshort()
+long = user1.islong()
+is_legit = user1.legit()
+#is_too_short = user1.isshort()
+#is_too_long = user1.islong()
 #This is a function to verify that the methods are able to find an incorrect rule or character.
-def legit():
-    if valid_length and has_digit and has_underscore and is_alpha and not None:
-        print("username is valid")
-    else:
-        print("username not valid")
-
-#Those are tests to see that the functions and the methods are working as expected.
-# print("\nunder\n--------")
-# print(user1.has_underscore())
-# print("\ndigit\n--------")
-# print(user1.has_digit())
-# print("\nlength\n--------")
-# print(user1.username_length())
-# print("\nalpha\n--------")
-# print(user1.is_alpha())
-# print("**********")
-legit()
+# def legit():
+#     if valid_length and has_digit and has_underscore and is_alpha and not None:
+#         print("username is valid")
+#     else:
+#         print("username not valid")
+#
+#legit()

@@ -4,14 +4,23 @@ class Password:
     # This is the default password for this class.
     def __init__(self, password):
         self.password = password
-        #print(password)
+
+# This method checks if the password is too short.
+    def passshort(self):
+        if len(self.password) < 8:
+            return True
+
+# This method checks if the password is too long.
+    def passlong(self):
+        if len(self.password) > 40:
+            return True
 
     # This method checks that the password in long enough and not too long.
     def password_length(self):
-        if 8 <= len(self.password) < 40:
-            return True
-        else:
+        if self.passlong() and self.passshort():
             return False
+        else:
+            return True
 
     # This method checks that there is at least one letter that is a capital letter.
     def is_capital(self):
@@ -31,14 +40,20 @@ class Password:
 
     # This method checks if there is at least one special character in the password.
     def special_char(self):
-        return any(string.punctuation for _ in self.password)
+        return any(char in string.punctuation for char in self.password)
+
+    def legal(self):
+        if self.is_alpha and self.is_digit and self.special_char and self.is_lower and self.is_capital and self.password_length:
+            return True
+        else:
+            return False
 
 #This is a function to verify that the methods are able to find an incorrect rule or character.
-def legal():
-    if is_alpha and is_digit and is_special and is_lower and is_capital and is_long:
-        print("password is valid")
-    else:
-        print("password not valid")
+# def legal():
+#     if is_alpha and is_digit and is_special and is_lower and is_capital and is_long:
+#         print("password is valid")
+#     else:
+#         print("password not valid")
 
 #This creates a password by calling the class Password, and ask the user to put an input.
 pass1 = Password(input("please enter the password: "))
@@ -50,20 +65,8 @@ is_digit = pass1.is_digit()
 is_alpha = pass1.is_alpha()
 is_special = pass1.special_char()
 is_long = pass1.password_length()
+is_legal = pass1.legal()
+short = pass1.passshort()
+long = pass1.passlong()
 
-#Those are tests to see that the functions and the methods are working as expected.
-# print("\nalpha\n--------")
-# print(pass1.is_alpha())
-# print("\ndigit\n--------")
-# print(pass1.is_digit())
-# print("\ncapital\n---------")
-# print(pass1.is_capital())
-# print("\nlower\n--------")
-# print(pass1.is_lower())
-# print("\nlength\n--------")
-# print(pass1.password_length())
-# print("\nspecial\n--------")
-# print(pass1.special_char())
-# print("**********")
-
-legal()
+#legal()
