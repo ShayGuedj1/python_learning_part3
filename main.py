@@ -3,17 +3,9 @@ import password
 import errors
 
 user = username.user1
-
 pwd = password.pass1
 
-# userillegalchar = errors.UsernameContainsIllegalCharacter()
-# usertooshort = errors.UsernameTooShort()
-# usertoolong = errors.UsernameTooLong()
-# passinvalidchar = errors.PasswordMissingCharacter()
-# passtooshot = errors.PasswordTooShort()
-# passtoolong = errors.PasswordTooLong()
-# This function checks that all the parameters are correct. If somthing is miising,
-# it will alert using the try and exept.
+# This function will print "ok" if the password and the username are legal.
 def check_input(username, password):
     # If the passowrd and username are correct, it will print ""
     if username.username_length() and username.has_digit() and username.has_underscore() and username.is_alpha() and \
@@ -22,11 +14,6 @@ def check_input(username, password):
         print("ok")
 
 
-# errors.UsernameContainsIllegalCharacter()
-# errors.UsernameTooShort()
-# errors.UsernameTooLong()
-# errors.PasswordMissingCharacter()
-# errors.PasswordTooShort()
-# errors.PasswordTooLong()
+
 
 check_input(user, pwd)
